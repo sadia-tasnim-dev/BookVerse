@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Hate You Give",
+    "author": "Alex Michaelides",
+    "image": "https://i.ibb.co/tw6PRVM/book5.png",
+    "review": "A gripping psychological thriller that keeps you guessing until the very end.",
+    "totalPages": 336,
+    "rating": 4.5,
+    "category": "Fiction",
+    "tags": ["Suspense", "Psychological"],
+    "publisher": "Celadon Books",
+    "yearOfPublishing": 2019
+  },
+  {
+    "bookId": 2,
+    "bookName": "Annotated Texas Family Code",
+    "author": "Tara Westover",
+    "image": "https://i.ibb.co/L1z3d8v/book4.png",
+    "review": "A powerful memoir about resilience, education, and the pursuit of knowledge.",
+    "totalPages": 352,
+    "rating": 4.7,
+    "category": "Biography",
+    "tags": ["Memoir", "Education"],
+    "publisher": "Random House",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": 3,
+    "bookName": "Spine Of The Dragon",
+    "author": "Erin Morgenstern",
+    "image": "https://i.ibb.co/SrGZx2N/book3.png",
+    "review": "An enchanting tale of love, magic, and the extraordinary.",
+    "totalPages": 400,
+    "rating": 4.4,
+    "category": "Fantasy",
+    "tags": ["Magic", "Romance"],
+    "publisher": "Doubleday",
+    "yearOfPublishing": 2011
+  },
+  {
+    "bookId": 4,
+    "bookName": "Dating PlayBook For Man",
+    "author": "James Clear",
+    "image": "https://i.ibb.co/5K87jKQ/banner-Book.png",
+    "review": "A practical guide to building good habits and breaking bad ones, backed by science.",
+    "totalPages": 320,
+    "rating": 4.6,
+    "category": "Self-Help",
+    "tags": ["Productivity", "Psychology"],
+    "publisher": "Avery",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": 5,
+    "bookName": "Money?",
+    "author": "Mark Manson",
+    "image": "https://i.ibb.co/TcfLBWK/book2.png",
+    "review": "A refreshing take on self-help, advocating for focusing on what truly matters in life.",
+    "totalPages": 224,
+    "rating": 4.2,
+    "category": "Self-Help",
+    "tags": ["Motivation", "Philosophy"],
+    "publisher": "HarperOne",
+    "yearOfPublishing": 2016
+  },
+  {
+    "bookId": 6,
+    "bookName": "The Lost Art Of Good Conversation",
+    "author": "Andy Weir",
+    "image": "https://i.ibb.co/nRXysD0/book1.png",
+    "review": "An exhilarating sci-fi adventure that combines humor, suspense, and scientific accuracy.",
+    "totalPages": 384,
+    "rating": 4.4,
+    "category": "Science Fiction",
+    "tags": ["Survival", "Space"],
+    "publisher": "Crown Publishing Group",
+    "yearOfPublishing": 2014
+  }
+]
