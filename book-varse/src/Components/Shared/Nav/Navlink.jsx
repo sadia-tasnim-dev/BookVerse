@@ -6,7 +6,7 @@ export const Navlink = ({ title, url }) => {
     <Link
       className={`py-1 px-3  ${
         location.pathname === url
-          ? "text-blue-900 font-bold bg-blue-100 rounded-lg  "
+          ? "text-blue-900 font-bold bg-blue-200 rounded-lg"
           : "border-transparent font-medium "
       }`}
       to={url}

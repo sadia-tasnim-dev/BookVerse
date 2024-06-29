@@ -10,7 +10,7 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex items-center justify-between mt-3 max-w-screen-xl mx-auto">
+    <div className="flex items-center justify-between mt-3 ">
       <div className="flex items-center gap-5">
         <div className=" lg:hidden">
           <RiMenu2Line
@@ -20,7 +20,7 @@ export const Navbar = () => {
             }}
           />
           {open && (
-            <div className="absolute rounded-b-full top-0 bg-blue-50  pt-6 left-0 p-9 w-full">
+            <div className="absolute rounded-b-full top-0 bg-blue-100  pt-6 left-0 p-9 w-full">
               <div className="flex justify-between items-center mb-4">
                 <img className="h-11 " src="./image/book-logo.png" />
                 <AiTwotoneCloseCircle
@@ -28,7 +28,7 @@ export const Navbar = () => {
                   onClick={() => setOpen(false)}
                 />
               </div>
-              <div className="flex flex-col w-fit">
+              <div className="flex flex-col items-center">
                 {AllLinks.map((link) => (
                   <Navlink key={link.url} {...link}></Navlink>
                 ))}
