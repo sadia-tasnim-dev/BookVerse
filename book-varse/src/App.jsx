@@ -3,7 +3,9 @@ import { AppRouter } from "./Router/AllRoute";
 function App() {
   return (
     <>
-      <AppRouter />
+      <div className="px-8">
+        <AppRouter />
+      </div>
     </>
   );
 }

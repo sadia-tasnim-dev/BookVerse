@@ -5,6 +5,8 @@ import ListedBook from "../Pages/ListedBook/ListedBook";
 import { ReadBook } from "../Pages/ReadBook/ReadBook";
 import { BookDetails } from "../Pages/BookDetails/BookDetails";
 import { NotFound } from "../Pages/NotFound/NotFound";
+import { AuthorPage } from "../Pages/AuthorPage/AuthorPage";
+import { Reviews } from "../Pages/Reviews/Reviews";
 
 const router = createBrowserRouter([
   {
@@ -16,17 +18,19 @@ const router = createBrowserRouter([
         element: <Homepage />,
       },
       {
-        path: "/listedBook",
+        path: "/listed-book",
         element: <ListedBook />,
       },
       {
-        path: "/readBook",
+        path: "/read-book",
         element: <ReadBook />,
       },
       {
         path: "/book",
         element: <BookDetails />,
       },
+      { path: "/authors", element: <AuthorPage /> },
+      { path: "/reviews", element: <Reviews /> },
     ],
   },
   { path: "*", element: <NotFound></NotFound> },
