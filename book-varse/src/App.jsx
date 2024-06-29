@@ -1,7 +1,11 @@
-import "./App.css";
+import { AppRouter } from "./Router/AllRoute";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <AppRouter />
+    </>
+  );
 }
 
 export default App;
