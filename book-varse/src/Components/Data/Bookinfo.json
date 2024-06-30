@@ -72,7 +72,7 @@
     "review": "An exhilarating sci-fi adventure that combines humor, suspense, and scientific accuracy.",
     "totalPages": 384,
     "rating": 4.4,
-    "category": "Science Fiction",
+    "category": "Science",
     "tags": ["Survival", "Space"],
     "publisher": "Crown Publishing Group",
     "yearOfPublishing": 2014
@@ -124,7 +124,7 @@
     "review": "An epic historical saga set against the backdrop of war and love.",
     "totalPages": 448,
     "rating": 4.8,
-    "category": "Historical Fiction",
+    "category": "Historical",
     "tags": ["War", "Romance"],
     "publisher": "Hachette Book Group",
     "yearOfPublishing": 2021
@@ -150,7 +150,7 @@
     "review": "A haunting psychological thriller that delves into the darkest corners of the human mind.",
     "totalPages": 400,
     "rating": 4.6,
-    "category": "Psychological Fiction",
+    "category": "Fiction",
     "tags": ["Psychology", "Mystery"],
     "publisher": "HarperCollins Publishers",
     "yearOfPublishing": 2018
