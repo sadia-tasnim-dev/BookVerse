@@ -18,6 +18,7 @@ export const BookDetails = () => {
     const readList = JSON.parse(readList);
     if (!readList) {
       localStorage.setItem("read-list", JSON.stringify([bookId]));
+      return;
     }
   };
 
