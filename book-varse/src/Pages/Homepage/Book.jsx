@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { Rating } from "../../Components/Shared/Rating";
 
-export const Book = ({ image, bookName, author, rating, category }) => {
+export const Book = ({ image, bookName, author, rating, category, bookId }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-blue-50 rounded-t-full flex flex-col shadow-[5px_5px_20px_2px_#e6e8eb]">
       <div className="px-6 pt-[110px] relative ">
@@ -20,7 +23,10 @@ export const Book = ({ image, bookName, author, rating, category }) => {
         </div>
         <div className="flex items-center mt-3 justify-between">
           <h1 className="text-lg font-semibold text-slate-400">{category}</h1>
-          <button className="flex items-center gap-2 w-fit bg-gradient-banner text-white font-semibold px-2  rounded-2xl truncate">
+          <button
+            onClick={() => navigate("/book/" + bookId)}
+            className=" w-fit bg-gradient-banner text-white font-semibold px-2  rounded-2xl truncate"
+          >
             View details
           </button>
         </div>

@@ -1,31 +1,77 @@
+import { useParams } from "react-router-dom";
 import { Rating } from "../../Components/Shared/Rating";
+import books from "./../../Components/Data/Bookinfo.json";
 
-export const BookDetails = ({ image, bookName, author, rating, category }) => {
+export const BookDetails = () => {
+  const { bookId } = useParams();
+  const [book] = books.filter((el) => el.bookId === Number(bookId));
+  if (!book) return <p>Book Not found</p>;
+
+  const {
+    image,
+    bookName,
+    author,
+    review,
+    category,
+    tags,
+    totalPages,
+    publisher,
+    yearOfPublishing,
+    rating,
+  } = book;
+
   return (
-    <div className="bg-blue-50 rounded-t-full flex flex-col shadow-[5px_5px_20px_2px_#e6e8eb]">
-      <div className="px-6 pt-[110px] relative ">
-        <img
-          className="h-36 absolute -top-14 left-1/2"
-          style={{ transform: "translateX(-50%)" }}
-          src={image}
-        />
-        <h1 className="oswald text-xl flex-grow text-blue-900">{bookName}</h1>
-        <h1 className="text-xs font-semibold text-slate-400 mt-2">
+    <div className="px-12 py-8  max-w-screen-lg mx-auto mt-10 bg-blue-50 rounded-lg  shadow-[10px_10px_28px_5px_#e6e8eb]  flex justify-around">
+      <img className="h-96" src={image} />
+      <div className="pt-4 pl-7">
+        <h1 className="oswald text-4xl  text-blue-900">{bookName}</h1>
+        <h1 className=" font-semibold text-slate-400 mt-1 border-b border-b-blue-100 pb-3">
           By {author}
         </h1>
-
-        <div className="flex items-center justify-between mt-3 pb-4 border-b border-blue-100">
-          <Rating rating={rating} />
-          <h1 className="font-semibold text-cyan-500">{rating} Star</h1>
+        <h1 className="text-lg font-semibold text-sky-700 border-b border-b-blue-100 py-2">
+          {category}
+        </h1>
+        <h1 className="text-gray-400 py-2 mb-3">
+          <span className="text-blue-950 font-bold ">Review: </span> {review}
+        </h1>
+        <div>
+          {tags.map((tag, index) => (
+            <span
+              className="bg-sky-100 text-sm text-cyan-900 px-2 py-1 rounded-xl font-bold mr-2"
+              key={index}
+            >
+              # {tag}
+            </span>
+          ))}
         </div>
-        <div className="flex items-center mt-3 justify-between">
-          <h1 className="text-lg font-semibold text-slate-400">{category}</h1>
-          <button className="flex items-center gap-2 w-fit bg-gradient-banner text-white font-semibold px-2  rounded-2xl truncate">
-            View details
+        <div className="flex gap-3 items-center mt-4 pb-4 ">
+          <h1 className="text-blue-500 font-bold ">
+            <span className="text-blue-950 font-bold mr-2 ">Rating: </span>
+            {rating}
+          </h1>
+          <Rating rating={rating} />
+        </div>
+        <div className="border-t border-t-blue-100 pt-3 flex gap-5">
+          <div className="text-cyan-700 font-bold">
+            <h1 className="pb-1">TotalPages: </h1>
+            <p className="pb-1">Publisher: </p>
+            <p className="pb-1">Year Of Publishing:</p>
+          </div>
+          <div className="text-gray-500 ">
+            <h1 className="pb-1"> {totalPages}</h1>
+            <p className="pb-1">{publisher}</p>
+            <p className="pb-1">{yearOfPublishing}</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3 mt-3 ">
+          <button className="w-fit bg-gradient-banner text-white font-semibold px-4 py-1  rounded-2xl truncate">
+            Add to read list
+          </button>
+          <button className="w-fit border border-sky-400 text-sky-600 font-semibold px-4 py-1 rounded-2xl truncate">
+            Add to wish list
           </button>
         </div>
       </div>
-      <div className="rounded-b-full bg-blue-50 h-8 -mb-8 mt-auto shadow-xl shadow-gray-300" />
     </div>
   );
 };
