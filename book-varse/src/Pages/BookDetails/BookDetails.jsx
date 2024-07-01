@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Rating } from "../../Components/Shared/Rating";
 import books from "./../../Components/Data/Bookinfo.json";
+import { toast } from "sonner";
 
 export const BookDetails = () => {
   const { bookId } = useParams();
@@ -15,17 +16,31 @@ export const BookDetails = () => {
 
   const AddToReadList = () => {
     const readListString = localStorage.getItem("read-list");
-    const readList = JSON.parse(readList);
+    const readList = JSON.parse(readListString);
     if (!readList) {
       localStorage.setItem("read-list", JSON.stringify([bookId]));
-      return;
+      return toast.success("Book added to read list");
     }
+    if (readList.includes(bookId)) {
+      return toast.error("Book is already exit in read list");
+    }
+    localStorage.setItem("read-list", JSON.stringify([...readList, bookId]));
+    toast.success("Book added to the list");
   };
 
-  const getData = () => {
-    const data = localStorage.getItem("book");
-    const parseData = JSON.parse(data);
-    console.log(parseData);
+  const addToWishList = () => {
+    const wishListString = localStorage.getItem("wish-list");
+    const wishList = JSON.parse(wishListString);
+    if (!wishList) {
+      localStorage.setItem("wish-list", JSON.stringify([bookId]));
+      return toast.success("Book is added to wish list");
+    }
+    if (wishList.includes(bookId)) {
+      return toast.error("Book is already exit in wish list");
+    }
+
+    localStorage.setItem("wish-list", JSON.stringify([...wishList, bookId]));
+    toast.success("Book is added to wish list");
   };
 
   const {
@@ -94,7 +109,10 @@ export const BookDetails = () => {
           <button className="w-fit bg-gradient-btn text-white font-semibold px-4 py-1  rounded-2xl truncate">
             Open to read
           </button>
-          <button className="w-fit bg-gradient-btn2 text-sky-800 font-semibold px-4 py-1 rounded-2xl truncate">
+          <button
+            onClick={addToWishList}
+            className="w-fit bg-gradient-btn2 text-sky-800 font-semibold px-4 py-1 rounded-2xl truncate"
+          >
             Add to wish list
           </button>
         </div>
