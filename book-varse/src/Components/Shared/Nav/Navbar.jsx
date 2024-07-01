@@ -10,7 +10,7 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex items-center justify-between mt-3 ">
+    <div className="flex items-center justify-between mt-3 container">
       <div className="flex items-center gap-5">
         <div className=" lg:hidden">
           <RiMenu2Line

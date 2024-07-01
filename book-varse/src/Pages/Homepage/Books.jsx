@@ -3,7 +3,7 @@ import { Book } from "./Book";
 
 export const Books = () => {
   return (
-    <div>
+    <div className="px-7">
       <h1 className="text-center text-4xl font-semibold text-sky-900 playwrite mt-10 mb-28">
         Books
       </h1>
