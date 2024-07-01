@@ -15,8 +15,17 @@ export const BookDetails = () => {
   }
 
   const AddToReadList = () => {
+    const wishListString = localStorage.getItem("wish-list");
+    const wishList = JSON.parse(wishListString);
+
+    if (wishList && wishList.includes(bookId)) {
+      const newWishList = wishList.filter((id) => id !== bookId);
+      localStorage.setItem("wish-list", JSON.stringify(newWishList));
+    }
+
     const readListString = localStorage.getItem("read-list");
     const readList = JSON.parse(readListString);
+
     if (!readList) {
       localStorage.setItem("read-list", JSON.stringify([bookId]));
       return toast.success("Book added to read list");
@@ -29,6 +38,13 @@ export const BookDetails = () => {
   };
 
   const addToWishList = () => {
+    const readListString = localStorage.getItem("read-list");
+    const readList = JSON.parse(readListString);
+
+    if (readList && readList.includes(bookId)) {
+      return toast.error("You have already read this book");
+    }
+
     const wishListString = localStorage.getItem("wish-list");
     const wishList = JSON.parse(wishListString);
     if (!wishList) {
