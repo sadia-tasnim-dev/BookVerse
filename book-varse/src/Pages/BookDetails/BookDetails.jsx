@@ -5,7 +5,13 @@ import books from "./../../Components/Data/Bookinfo.json";
 export const BookDetails = () => {
   const { bookId } = useParams();
   const [book] = books.filter((el) => el.bookId === Number(bookId));
-  if (!book) return <p>Book Not found</p>;
+  if (!book) {
+    return (
+      <p className="text-center text-2xl text-red-800 font-bold mt-10">
+        Book Not found
+      </p>
+    );
+  }
 
   const {
     image,
