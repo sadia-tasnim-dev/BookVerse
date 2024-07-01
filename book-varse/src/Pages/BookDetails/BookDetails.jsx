@@ -21,8 +21,8 @@ export const BookDetails = () => {
   } = book;
 
   return (
-    <div className="px-12 py-8  max-w-screen-lg mx-auto mt-10 bg-blue-50 rounded-lg  shadow-[10px_10px_28px_5px_#e6e8eb]  flex justify-around">
-      <img className="h-96" src={image} />
+    <div className="px-12 py-8  max-w-screen-lg mx-auto mt-10 bg-blue-50 rounded-lg  shadow-[10px_10px_28px_5px_#e6e8eb]  flex flex-col justify-around md:flex-row">
+      <img className="h-96 object-contain" src={image} />
       <div className="pt-4 pl-7">
         <h1 className="oswald text-4xl  text-blue-900">{bookName}</h1>
         <h1 className=" font-semibold text-slate-400 mt-1 border-b border-b-blue-100 pb-3">
