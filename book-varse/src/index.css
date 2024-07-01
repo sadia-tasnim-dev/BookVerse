@@ -31,3 +31,18 @@
     rgb(126, 217, 253) 100%
   );
 }
+.bg-gradient-btn {
+  background: linear-gradient(
+    90deg,
+    rgb(100, 97, 255) 50%,
+    rgb(188, 152, 255) 100%
+  );
+}
+
+.bg-gradient-btn2 {
+  background: linear-gradient(
+    90deg,
+    rgb(152, 214, 255) 10%,
+    rgb(219, 236, 255) 100%
+  );
+}

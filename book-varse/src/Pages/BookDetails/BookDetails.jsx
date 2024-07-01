@@ -67,7 +67,10 @@ export const BookDetails = () => {
           <button className="w-fit bg-gradient-banner text-white font-semibold px-4 py-1  rounded-2xl truncate">
             Add to read list
           </button>
-          <button className="w-fit border border-sky-400 text-sky-600 font-semibold px-4 py-1 rounded-2xl truncate">
+          <button className="w-fit bg-gradient-btn text-white font-semibold px-4 py-1  rounded-2xl truncate">
+            Open to read
+          </button>
+          <button className="w-fit bg-gradient-btn2 text-sky-800 font-semibold px-4 py-1 rounded-2xl truncate">
             Add to wish list
           </button>
         </div>
