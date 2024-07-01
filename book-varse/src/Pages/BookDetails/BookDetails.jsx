@@ -13,6 +13,20 @@ export const BookDetails = () => {
     );
   }
 
+  const AddToReadList = () => {
+    const readListString = localStorage.getItem("read-list");
+    const readList = JSON.parse(readList);
+    if (!readList) {
+      localStorage.setItem("read-list", JSON.stringify([bookId]));
+    }
+  };
+
+  const getData = () => {
+    const data = localStorage.getItem("book");
+    const parseData = JSON.parse(data);
+    console.log(parseData);
+  };
+
   const {
     image,
     bookName,
@@ -70,7 +84,10 @@ export const BookDetails = () => {
           </div>
         </div>
         <div className="flex items-center gap-3 mt-3 ">
-          <button className="w-fit bg-gradient-banner text-white font-semibold px-4 py-1  rounded-2xl truncate">
+          <button
+            onClick={AddToReadList}
+            className="w-fit bg-gradient-banner text-white font-semibold px-4 py-1  rounded-2xl truncate"
+          >
             Add to read list
           </button>
           <button className="w-fit bg-gradient-btn text-white font-semibold px-4 py-1  rounded-2xl truncate">
